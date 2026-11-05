@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Privacy and data use · Egg Stories</title><meta name="description" content="Egg Stories personal YouTube publishing tool: app information, privacy and data use."><link rel="stylesheet" href="style.css"></head>
+<body><header><a href="index.html">Egg Stories</a><nav aria-label="App information"><a href="index.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Use notice</a></nav></header><main><h1>Egg Stories: privacy and data use</h1>
+<p>The personal Egg Stories publisher uses Google authorization to identify the
+connected YouTube channel, upload the owner's videos, verify their processing,
+cover and metadata, schedule releases, and read video/channel analytics. The
+implementation requests YouTube access and read-only YouTube Analytics access.
+It uses these data for the channel automation and performance review described
+on its <a href="index.html">homepage</a>.</p>
+<p>OAuth credentials, refresh/access tokens, resumable upload sessions, quota state
+and publisher state are stored in private files on the configured execution host.
+These files are excluded from the source repository. Media, source/editorial QA,
+release receipts and collected analytics are saved to the configured project/state
+locations. The operator controls backups, access, sharing and retention of those
+records; automatic deletion of all collected data is not implemented.</p>
+<p>The renderer uses Modal for configured rendering jobs. The render adapter sends
+story/runtime files and narration to that worker; it does not send the Google
+OAuth token file. YouTube uploads and analytics requests go to Google's APIs.
+The publisher implements no sale of Google user data, advertising profile or
+third-party login service. Data use must remain limited to the disclosed channel
+workflow and Google's applicable API data-use policies.</p>
+<p>The owner can revoke the app's Google access in the Google Account's third-party
+connections settings and remove retained project/state files on the execution
+host. Revoking access does not delete videos already uploaded to YouTube; manage
+those separately in YouTube Studio. Support uses the contact already displayed
+on the app's Google consent screen.</p>
+<p><a href="index.html">Homepage</a> · <a href="terms.html">Use notice</a></p>
+</main><footer>Egg Stories · Personal channel publishing tool · Updated November 5, 2026</footer></body></html>
